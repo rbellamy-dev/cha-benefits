@@ -1,17 +1,18 @@
-# Cha — The Quiet Leaf
+# Cha-Benefits
 
-An editorial green-tea brand site: warm OKLCH paper tones, drifting blob-frame
-photography, an interactive steep timer, and a newsletter signup backed by
-[Resend](https://resend.com). 
+An editorial green-tea brand site with an interactive steep timer, and a
+newsletter signup backed by [Resend](https://resend.com).
 
 **Live:** [chabenefits.vercel.app](https://chabenefits.vercel.app/)
 
+<!--
 ## Stack
 
 Single HTML file, plain CSS/JS, no build step, no framework. One Vercel
 serverless function (`api/subscribe.js`) handles the signup form in
 production; `server.js` is a small Node HTTP server used only for local
 development (excluded from deployment via `.vercelignore`).
+-->
 
 ## Structure
 
@@ -58,9 +59,11 @@ instead of treating this as static + API). Requires `RESEND_API_KEY` and
 `NOTIFY_EMAIL` set as Production environment variables on the Vercel
 project.
 
+<!--
 ## Design system
 
 Full token reference, principles, and components: [`DESIGN.md`](./DESIGN.md).
 Audience, brand voice, and anti-references: [`PRODUCT.md`](./PRODUCT.md).
 A rendered, browsable version of the design system lives at
 [cha-design-system.vercel.app](https://cha-design-system.vercel.app/).
+-->
