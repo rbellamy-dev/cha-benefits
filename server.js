@@ -76,7 +76,9 @@ const server = http.createServer(async (req, res) => {
   }
 
   // Serve static files from this folder
-  let urlPath = req.url === '/' ? '/index.html' : req.url;
+  // Strip ?v=… cache-busting query strings before resolving the file
+  const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  let urlPath = pathname === '/' ? '/index.html' : pathname;
   const filePath = path.join(__dirname, urlPath);
   const ext = path.extname(filePath);
   const mime = MIME[ext] || 'application/octet-stream';
