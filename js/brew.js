@@ -1,10 +1,10 @@
 /* ─── Steep timer ────────────────────── */
 (function () {
   const TEAS = {
-    sencha:  { name: 'Sencha',  temp: '80°C', dose: '2g — one teaspoon',  secs: 120, from: [222, 228, 185], to: [116, 158, 72] },
-    gyokuro: { name: 'Gyokuro', temp: '60°C', dose: '3g — a full teaspoon', secs: 150, from: [220, 230, 190], to: [78, 138, 74] },
-    matcha:  { name: 'Matcha',  temp: '75°C', dose: '2g — sifted',         secs: 30,  from: [190, 214, 140], to: [70, 130, 60] },
-    hojicha: { name: 'Hojicha', temp: '90°C', dose: '3g — heaped',         secs: 45,  from: [232, 220, 195], to: [166, 108, 62] }
+    sencha:  { name: 'Sencha',  temp: '80°C', dose: '2g (one teaspoon)',  secs: 120, from: [222, 228, 185], to: [116, 158, 72] },
+    gyokuro: { name: 'Gyokuro', temp: '60°C', dose: '3g (a full teaspoon)', secs: 150, from: [220, 230, 190], to: [78, 138, 74] },
+    matcha:  { name: 'Matcha',  temp: '75°C', dose: '2g (sifted)',         secs: 30,  from: [190, 214, 140], to: [70, 130, 60] },
+    hojicha: { name: 'Hojicha', temp: '90°C', dose: '3g (heaped)',         secs: 45,  from: [232, 220, 195], to: [166, 108, 62] }
   };
 
   const steeper = document.getElementById('steeper');

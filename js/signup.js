@@ -11,7 +11,7 @@
 
     const v = input.value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
-      err.textContent = 'That address doesn’t look quite right — one more try.';
+      err.textContent = 'That address doesn’t look quite right. Try once more.';
       input.focus();
       return;
     }
