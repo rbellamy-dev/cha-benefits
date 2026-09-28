@@ -13,7 +13,7 @@
   grid-template-columns: 3.2rem .85fr 1.15fr;
   gap: clamp(.9rem, 2.2vw, 1.6rem);
   align-items: baseline;
-  padding: clamp(1.1rem, 2vw, 1.5rem) clamp(.5rem, 1.2vw, 1rem);
+  padding: clamp(1.6rem, 3.4vw, 2.75rem) clamp(.5rem, 1.2vw, 1rem);
   border-bottom: 1px solid var(--hairline);
   position: relative; cursor: pointer;
   transition: background .45s var(--ease-soft);
@@ -43,7 +43,7 @@
 /* sticky image panel */
 .benefits-figure {
   position: sticky;
-  top: max(90px, calc(50vh - 250px));
+  top: max(90px, calc(50vh - 215px)); /* 215 = half the ~430px image, so it sits in the vertical centre */
   padding: 0 clamp(0px, 1vw, 12px);
 }
 .benefits-frame {
