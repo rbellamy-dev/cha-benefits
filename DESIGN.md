@@ -1,6 +1,6 @@
 ---
-name: Cha — The Quiet Leaf
-description: An editorial green-tea brand site: warm oklch paper, drifting blob frames, and Fraunces set light.
+name: "Cha Benefits"
+description: "An editorial green-tea brand site: warm oklch paper, drifting blob frames, and Fraunces set light."
 colors:
   warm-paper: "oklch(95.9% 0.008 79)"
   warm-paper-card: "oklch(99.5% 0.004 79)"
@@ -94,7 +94,7 @@ components:
     padding: "0.5rem 1rem"
 ---
 
-# Design System: Cha — The Quiet Leaf
+# Design System: Cha Benefits
 
 ## 1. Overview
 
@@ -173,7 +173,7 @@ Buttons, toggles, and inputs share one felt quality: unhurried tactility. Every 
 ### Buttons
 - **Shape:** full pill (`border-radius: 99px`), never square or lightly-rounded.
 - **Primary** (Ink Green fill, Warm Paper text): `padding: 0.95rem 1.9rem`, uppercase Karla 600 label type, `0.16em` tracking.
-- **Gold** (Steeped Gold fill, Night Pine Deep text): the "big ask" CTA variant — used for the hero's primary action and the newsletter Subscribe button, on both light and dark contexts.
+- **Gold** (Steeped Gold fill, Night Pine Deep text): the "big ask" CTA variant — used for the hero's primary action and the newsletter Subscribe button. Dark (Night Pine) sections only, per the Steeped Gold rule.
 - **Ghost / Ghost-dark:** transparent fill, 1.5px border at low opacity (`ink / 0.28` on light, `on-dark / 0.35` on dark); border and text shift to the section's accent color on hover.
 - **Hover / Focus:** `translateY(-3px)` plus a tinted diffuse shadow matching the button's own fill color; `:active` snaps back down in 0.08s — the one intentionally fast transition in the system, giving buttons a physical "press."
 
