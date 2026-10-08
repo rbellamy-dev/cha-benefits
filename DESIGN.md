@@ -51,7 +51,8 @@ The palette reads as "paper and ink, lit by one green and one gold" — a restra
 ### Hierarchy
 - **Display** (300, `clamp(3.4rem, 9.2vw, 7.6rem)`, line-height 1.0): the hero headline only. Animates in line-by-line on a slow rise.
 - **Headline** (300, `clamp(2.1rem, 4.6vw, 3.6rem)`, line-height 1.08): section titles (Benefits, Ritual, Brew, Signup).
-- **Title** (400, `clamp(1.25rem, 2vw, 1.7rem)`, line-height 1.15): component-level headings — benefit names, ritual stop names, brew step titles.
+- **Title** (400, `--title-size`: `clamp(1.3rem, 2.1vw, 1.6rem)`): component-level headings, benefit names and ritual stop names.
+- **Small title** (400, `--title-size-sm`: 1.25rem): brew step titles, where titles sit in a compact list.
 - **Body** (400, 1rem, line-height 1.6–1.7, Karla): running copy, capped near 46–60ch in practice (`.step-desc`, `.section-intro`).
 - **Label** (600, 0.75rem, letter-spacing 0.30em, uppercase, Karla): kickers, nav links, buttons, form notes — the system's only heavily-tracked, all-caps text.
 

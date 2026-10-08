@@ -19,7 +19,8 @@
   border: 1.5px solid oklch(24% 0.022 55 / 0.22);
   transition: all .35s var(--ease-out);
 }
-.tea-pick:hover { border-color: var(--accent); color: var(--accent); }
+/* .is-hover mirrors :hover for the style guide's static state row. */
+.tea-pick:hover, .tea-pick.is-hover { border-color: var(--accent); color: var(--accent); }
 .tea-pick[aria-pressed="true"] {
   background: var(--accent); border-color: var(--accent); color: var(--canvas);
 }
@@ -31,7 +32,7 @@
   font-size: 1.6rem; color: var(--accent); flex-shrink: 0; width: 2.4rem;
 }
 .step-title {
-  font-family: var(--serif); font-weight: 400; font-size: 1.25rem;
+  font-family: var(--serif); font-weight: 400; font-size: var(--title-size-sm);
   margin-bottom: .35rem;
 }
 .step-desc { color: var(--ink-soft); font-size: .96rem; line-height: 1.65; max-width: 46ch; }

@@ -53,8 +53,8 @@
 .ritual-stop:nth-child(4) .ritual-img { animation-delay: -12s; }
 .ritual-stop:nth-child(5) .ritual-img { animation-delay: -16s; }
 .ritual-name {
-  font-family: var(--serif); font-weight: 300;
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin-bottom: .55rem;
+  font-family: var(--serif); font-weight: 400;
+  font-size: var(--title-size); margin-bottom: .55rem;
 }
 .ritual-name em { font-style: italic; color: var(--gold); }
 .ritual-desc { font-size: .9rem; color: var(--on-dark-soft); line-height: 1.6; }

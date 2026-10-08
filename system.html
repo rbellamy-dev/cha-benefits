@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cha: Style guide</title>
+  <meta name="description" content="The living style guide for Cha, The Quiet Leaf. Rendered from the site's own CSS, so it cannot drift.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Karla:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- The site's own stylesheets first; system.css carries layout only. -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/benefits.css">
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="css/brew.css">
+  <link rel="stylesheet" href="css/system.css">
+</head>
+
+<body id="top">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="grain-clip" aria-hidden="true"><div class="grain"></div></div>
+
+  <!-- ═══════════ STICKY BAR ═══════════
+       A direct child of <body>: position: sticky only holds within its parent. -->
+  <div class="sg-bar">
+    <div class="sg-wrap">
+      <a class="sg-brand" href="#top" aria-label="Cha style guide, back to top"><span class="mark" aria-hidden="true">茶</span>Cha<span class="dim"> · Style guide</span></a>
+      <nav aria-label="Sections of this guide">
+        <ul class="sg-nav" role="list">
+          <li><a href="#color">Colour</a></li>
+          <li><a href="#type">Type</a></li>
+          <li><a href="#motion">Motion</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="index.html">Site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ═══════════ INTRO ═══════════ -->
+  <header class="sg-wrap sg-intro">
+    <h1 class="section-title">The quiet leaf, <em>as built</em>.</h1>
+    <p class="section-intro">A working reference for Cha's design system. Every colour, type style and component below is drawn from the site's own stylesheets, so it always matches the live site.</p>
+    <dl class="sg-howto">
+      <div><dt>Left</dt><dd>The name in code. Tokens start with <code>--</code>, classes with a dot.</dd></div>
+      <div><dt>Right</dt><dd>The real thing, rendered from <code>css/base.css</code>.</dd></div>
+      <div><dt>Specimens</dt><dd>For display only. Buttons and fields here don't do anything.</dd></div>
+    </dl>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════ 01 COLOUR ═══════════ -->
+    <section class="sg-section" aria-labelledby="color">
+      <div class="sg-wrap">
+        <div class="sg-head">
+          <p class="sec-kicker">01</p>
+          <h2 class="section-title" id="color">Paper and ink, lit by one <em>green</em> and one gold</h2>
+          <p class="sg-lede">Paper and ink carry the page. Green marks what matters on paper; gold does the same on the band. Never both at once.</p>
+        </div>
+
+        <div class="sg-groups">
+          <div class="sg-group">
+            <h3 class="sg-group-title">Paper</h3>
+            <ul class="sg-rows" role="list">
+              <li class="sg-swatch"><span class="sg-chip sg-chip--ring" style="background: var(--canvas)"></span><span class="sg-key"><code class="name">--canvas</code><span class="role"><em class="page-note">The page you're reading.</em> Every light section; never pure white.</span><code class="token-value" data-token="--canvas"></code></span></li>
+              <li class="sg-swatch"><span class="sg-chip sg-chip--ring" style="background: var(--canvas-card)"></span><span class="sg-key"><code class="name">--canvas-card</code><span class="role">Lift state for hovered rows. A whisper of elevation.</span><code class="token-value" data-token="--canvas-card"></code></span></li>
+            </ul>
+          </div>
+          <div class="sg-group">
+            <h3 class="sg-group-title">Ink</h3>
+            <ul class="sg-rows" role="list">
+              <li class="sg-swatch"><span class="sg-chip" style="background: var(--ink)"></span><span class="sg-key"><code class="name">--ink</code><span class="role">Body text and headings on paper.</span><code class="token-value" data-token="--ink"></code></span></li>
+              <li class="sg-swatch"><span class="sg-chip" style="background: var(--ink-soft)"></span><span class="sg-key"><code class="name">--ink-soft</code><span class="role">Supporting text: descriptions, captions.</span><code class="token-value" data-token="--ink-soft"></code></span></li>
+            </ul>
+          </div>
+          <div class="sg-group">
+            <h3 class="sg-group-title">Accent</h3>
+            <ul class="sg-rows" role="list">
+              <li class="sg-swatch"><span class="sg-chip" style="background: var(--accent)"></span><span class="sg-key"><code class="name">--accent</code><span class="role">Links, CTAs, active states, focus. Spent like ink.</span><code class="token-value" data-token="--accent"></code></span></li>
+              <li class="sg-swatch"><span class="sg-chip" style="background: var(--accent-deep)"></span><span class="sg-key"><code class="name">--accent-deep</code><span class="role">Hover and pressed fills; live timer numerals.</span><code class="token-value" data-token="--accent-deep"></code></span></li>
+            </ul>
+          </div>
+          <div class="sg-group">
+            <h3 class="sg-group-title">Lines</h3>
+            <ul class="sg-rows" role="list">
+              <li class="sg-swatch"><span class="sg-chip sg-chip--ring sg-chip--lines"></span><span class="sg-key"><code class="name">--hairline</code><span class="role">Ink at low opacity. The only border the system draws.</span><code class="token-value" data-token="--hairline"></code></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-band">
+        <div class="sg-wrap">
+          <div class="sg-groups">
+            <div class="sg-group">
+              <h3 class="sg-group-title">Band</h3>
+              <ul class="sg-rows" role="list">
+                <li class="sg-swatch"><span class="sg-chip sg-chip--ring" style="background: var(--band)"></span><span class="sg-key"><code class="name">--band</code><span class="role">Night Pine. Hero, ritual, signup and footer.</span><code class="token-value" data-token="--band"></code></span></li>
+                <li class="sg-swatch"><span class="sg-chip sg-chip--ring" style="background: var(--band-mid)"></span><span class="sg-key"><code class="name">--band-mid</code><span class="role">The lighter end of a band gradient.</span><code class="token-value" data-token="--band-mid"></code></span></li>
+                <li class="sg-swatch"><span class="sg-chip sg-chip--ring" style="background: var(--band-deep)"></span><span class="sg-key"><code class="name">--band-deep</code><span class="role">The footer, and text on gold.</span><code class="token-value" data-token="--band-deep"></code></span></li>
+              </ul>
+            </div>
+            <div class="sg-group">
+              <h3 class="sg-group-title">Gold and text on dark</h3>
+              <ul class="sg-rows" role="list">
+                <li class="sg-swatch"><span class="sg-chip" style="background: var(--gold)"></span><span class="sg-key"><code class="name">--gold</code><span class="role">The accent on the band only. Never on paper.</span><code class="token-value" data-token="--gold"></code></span></li>
+                <li class="sg-swatch"><span class="sg-chip" style="background: var(--on-dark)"></span><span class="sg-key"><code class="name">--on-dark</code><span class="role">Warm Paper reused as text on Night Pine.</span><code class="token-value" data-token="--on-dark"></code></span></li>
+                <li class="sg-swatch"><span class="sg-chip" style="background: var(--on-dark-soft)"></span><span class="sg-key"><code class="name">--on-dark-soft</code><span class="role">Secondary text on Night Pine, at 70 percent.</span><code class="token-value" data-token="--on-dark-soft"></code></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 02 TYPE ═══════════ -->
+    <section class="sg-section" aria-labelledby="type">
+      <div class="sg-wrap">
+        <div class="sg-head">
+          <p class="sec-kicker">02</p>
+          <h2 class="section-title" id="type">Set light, so scale does the <em>talking</em></h2>
+          <p class="sg-lede">Fraunces at 300 for display, Karla for everything functional. Shown at true size, largest first. One italic word per headline carries the section's accent.</p>
+        </div>
+
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Headline</h3><code>.section-title</code><span>--serif 300 · section titles</span></div>
+          <div class="sg-specimen"><p class="section-title">What one cup <em>quietly does</em></p></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Title</h3><code>--title-size</code><span>--serif 400 · benefit names and ritual stops</span></div>
+          <div class="sg-specimen"><p class="benefit-name">Calm, steady focus</p></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Small title</h3><code>--title-size-sm</code><span>--serif 400 · brew steps, where titles sit in a compact list</span></div>
+          <div class="sg-specimen"><p class="step-title">Measure and steep</p></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Intro</h3><code>.section-intro</code><span>--sans 400 · under a section title</span></div>
+          <div class="sg-specimen"><p class="section-intro">Five effects, in order of evidence. No miracle claims. Just what decades of research keep finding, cup after cup.</p></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Body</h3><code>body</code><span>--sans 400 · running copy</span></div>
+          <div class="sg-specimen"><p class="sg-body">L-theanine is a calming amino acid found only in tea. It rides alongside caffeine and softens its edges. The result is calm, steady focus that lasts for hours.</p></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Label</h3><code>.sec-kicker</code><span>--sans 600 · kickers, nav, buttons</span></div>
+          <div class="sg-specimen"><p class="sec-kicker">The ledger</p></div>
+        </div>
+      </div>
+
+      <div class="sg-band">
+        <div class="sg-wrap">
+          <h3 class="sg-group-title">On the band</h3>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Display</h3><code>.hero-headline</code><span>--serif 300 · the hero only</span></div>
+            <div class="sg-specimen"><p class="hero-headline">Steep slower. <em>Live greener.</em></p></div>
+          </div>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Headline</h3><code>.section-title--dark</code><span>--on-dark · italic in --gold</span></div>
+            <div class="sg-specimen"><p class="section-title section-title--dark">The day has a <em>rhythm</em>.</p></div>
+          </div>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Label</h3><code>.sec-kicker--dark</code><span>--gold</span></div>
+            <div class="sg-specimen"><p class="sec-kicker sec-kicker--dark">A day in five cups</p></div>
+          </div>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Intro</h3><code>.section-intro--dark</code><span>--on-dark-soft</span></div>
+            <div class="sg-specimen"><p class="section-intro section-intro--dark">Different hours ask different things of you. Match the steep to the moment.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 03 MOTION ═══════════ -->
+    <section class="sg-section" aria-labelledby="motion">
+      <div class="sg-wrap">
+        <div class="sg-head">
+          <p class="sec-kicker">03</p>
+          <h2 class="section-title" id="motion">Drifts, never <em>bounces</em></h2>
+          <p class="sg-lede">Two curves carry every transition. Both leave quickly and arrive slowly. With reduced motion turned on, each demo rests in its finished state.</p>
+        </div>
+
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Ease out</h3><code>--ease-out</code><span>Use for anything the reader causes: reveals, button lift, the tea picker.</span></div>
+          <div class="sg-specimen"><div class="sg-track" aria-hidden="true"><span class="sg-dot"></span></div><code class="token-value" data-token="--ease-out"></code></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Ease soft</h3><code>--ease-soft</code><span>Use for slow ambient change: the cup filling, steam.</span></div>
+          <div class="sg-specimen"><div class="sg-track" aria-hidden="true"><span class="sg-dot sg-dot--soft"></span></div><code class="token-value" data-token="--ease-soft"></code></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Blob frame</h3><code>.blob-frame</code><span>Use for every photograph. The one non-geometric shape in the system; drifts over 18 seconds.</span></div>
+          <div class="sg-specimen">
+            <div class="blob-frame sg-blob">
+              <picture>
+                <source type="image/webp" srcset="images/ritual-morning-480.webp 480w, images/ritual-morning.webp 1024w" sizes="160px">
+                <img src="images/ritual-morning.jpg" alt="A steaming cup of green tea in soft golden morning light" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 04 COMPONENTS ═══════════ -->
+    <section class="sg-section" aria-labelledby="components" id="components-states">
+      <div class="sg-wrap">
+        <div class="sg-head">
+          <p class="sec-kicker">04</p>
+          <h2 class="section-title" id="components">Soft pills, <em>unhurried</em> hands</h2>
+          <p class="sg-lede">Every interactive surface is a full pill. Hover lifts 3px on the slow curve; press snaps back in 0.08s, the one fast transition in the system.</p>
+        </div>
+        <p class="sr-only">The specimens in this section are for display and don't perform any action.</p>
+        <!-- Phones only: hover doesn't exist on touch, so Hover and Pressed wait behind this. -->
+        <button type="button" class="sg-toggle" aria-pressed="false" aria-controls="components-states">Show hover and pressed states</button>
+
+        <!-- Hover, focus and pressed specimens carry .is-hover / .is-focus /
+             .is-active, defined in the site's CSS beside the real pseudo-classes.
+             Duplicates are hidden from assistive tech; only the resting one is real. -->
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Primary</h3><code>.btn-solid</code><span>Use for the one main action on a paper section.</span></div>
+          <div class="sg-specimen"><div class="sg-states">
+            <div class="sg-state"><button type="button" class="btn-solid">Start the steep</button><span class="sg-cap">Rest</span></div>
+            <div class="sg-state sg-state--extra"><button type="button" class="btn-solid is-hover" aria-hidden="true" tabindex="-1">Start the steep</button><span class="sg-cap">Hover</span></div>
+            <div class="sg-state"><button type="button" class="btn-solid is-focus" aria-hidden="true" tabindex="-1">Start the steep</button><span class="sg-cap">Focus</span></div>
+            <div class="sg-state sg-state--extra"><button type="button" class="btn-solid is-active" aria-hidden="true" tabindex="-1">Start the steep</button><span class="sg-cap">Pressed</span></div>
+          </div></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Secondary</h3><code>.btn-ghost</code><span>Use beside a primary, for the quieter path.</span></div>
+          <div class="sg-specimen"><div class="sg-states">
+            <div class="sg-state"><button type="button" class="btn-ghost">Why it works</button><span class="sg-cap">Rest</span></div>
+            <div class="sg-state sg-state--extra"><button type="button" class="btn-ghost is-hover" aria-hidden="true" tabindex="-1">Why it works</button><span class="sg-cap">Hover</span></div>
+            <div class="sg-state"><button type="button" class="btn-ghost is-focus" aria-hidden="true" tabindex="-1">Why it works</button><span class="sg-cap">Focus</span></div>
+          </div></div>
+        </div>
+        <div class="sg-spec">
+          <div class="sg-label"><h3>Toggle pill</h3><code>.tea-pick</code><span>Use to choose one option from a short set. The selected state lives in <code>aria-pressed</code>, not a class.</span></div>
+          <div class="sg-specimen"><div class="sg-states">
+            <div class="sg-state"><button type="button" class="tea-pick" aria-pressed="false">Gyokuro</button><span class="sg-cap">Rest</span></div>
+            <div class="sg-state sg-state--extra"><button type="button" class="tea-pick is-hover" aria-pressed="false" aria-hidden="true" tabindex="-1">Matcha</button><span class="sg-cap">Hover</span></div>
+            <div class="sg-state"><button type="button" class="tea-pick is-focus" aria-pressed="false" aria-hidden="true" tabindex="-1">Hojicha</button><span class="sg-cap">Focus</span></div>
+            <div class="sg-state"><button type="button" class="tea-pick" aria-pressed="true" aria-hidden="true" tabindex="-1">Sencha</button><span class="sg-cap">Selected</span></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="sg-band">
+        <div class="sg-wrap">
+          <h3 class="sg-group-title">On the band</h3>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Gold</h3><code>.btn-solid--gold</code><span>Use for the big ask. Dark sections only, one per section.</span></div>
+            <div class="sg-specimen"><div class="sg-states">
+              <div class="sg-state"><button type="button" class="btn-solid btn-solid--gold">Steep a cup</button><span class="sg-cap">Rest</span></div>
+              <div class="sg-state sg-state--extra"><button type="button" class="btn-solid btn-solid--gold is-hover" aria-hidden="true" tabindex="-1">Steep a cup</button><span class="sg-cap">Hover</span></div>
+              <div class="sg-state"><button type="button" class="btn-solid btn-solid--gold is-focus" aria-hidden="true" tabindex="-1">Steep a cup</button><span class="sg-cap">Focus</span></div>
+              <div class="sg-state sg-state--extra"><button type="button" class="btn-solid btn-solid--gold is-active" aria-hidden="true" tabindex="-1">Steep a cup</button><span class="sg-cap">Pressed</span></div>
+            </div></div>
+          </div>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Secondary</h3><code>.btn-ghost--dark</code><span>Use beside the gold button on a dark section.</span></div>
+            <div class="sg-specimen"><div class="sg-states">
+              <div class="sg-state"><button type="button" class="btn-ghost btn-ghost--dark">Why it works</button><span class="sg-cap">Rest</span></div>
+              <div class="sg-state sg-state--extra"><button type="button" class="btn-ghost btn-ghost--dark is-hover" aria-hidden="true" tabindex="-1">Why it works</button><span class="sg-cap">Hover</span></div>
+              <div class="sg-state"><button type="button" class="btn-ghost btn-ghost--dark is-focus" aria-hidden="true" tabindex="-1">Why it works</button><span class="sg-cap">Focus</span></div>
+            </div></div>
+          </div>
+          <div class="sg-spec">
+            <div class="sg-label"><h3>Email field</h3><code>.form-group</code><span>One pill holds the field and the button. Focus turns the pill gold; the message line underneath carries error and success.</span></div>
+            <div class="sg-specimen"><div class="sg-forms">
+              <div class="sg-state">
+                <div class="form-group">
+                  <label for="sg-email-rest" class="sr-only">Email address</label>
+                  <input type="email" id="sg-email-rest" placeholder="your@email.com" class="form-input" readonly>
+                  <button type="button" class="btn-solid btn-solid--gold">Subscribe</button>
+                </div>
+                <span class="sg-cap">Rest</span>
+              </div>
+              <div class="sg-state">
+                <div class="form-group is-focus" aria-hidden="true">
+                  <input type="email" placeholder="your@email.com" class="form-input" readonly tabindex="-1">
+                  <button type="button" class="btn-solid btn-solid--gold" tabindex="-1">Subscribe</button>
+                </div>
+                <span class="sg-cap">Focus</span>
+              </div>
+              <div class="sg-state">
+                <div class="form-group">
+                  <label for="sg-email-error" class="sr-only">Email address</label>
+                  <input type="email" id="sg-email-error" value="ramona@" class="form-input" aria-invalid="true" aria-describedby="sg-form-error" readonly tabindex="-1">
+                  <button type="button" class="btn-solid btn-solid--gold" tabindex="-1">Subscribe</button>
+                </div>
+                <p id="sg-form-error" class="form-message form-error-msg">That address doesn’t look quite right. Try once more.</p>
+                <span class="sg-cap">Error</span>
+              </div>
+              <div class="sg-state">
+                <div class="form-group">
+                  <label for="sg-email-success" class="sr-only">Email address</label>
+                  <input type="email" id="sg-email-success" placeholder="your@email.com" class="form-input" aria-describedby="sg-form-success" readonly tabindex="-1">
+                  <button type="button" class="btn-solid btn-solid--gold" tabindex="-1">Subscribe</button>
+                </div>
+                <p id="sg-form-success" class="form-message form-success-msg">You’re on the list. Thank you.</p>
+                <span class="sg-cap">Success</span>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 05 PRINCIPLES ═══════════ -->
+    <section class="sg-section" aria-labelledby="principles">
+      <div class="sg-wrap">
+        <div class="sg-head">
+          <p class="sec-kicker">05</p>
+          <h2 class="section-title" id="principles">Four rules, kept <em>quietly</em></h2>
+        </div>
+
+        <ol class="sg-principles">
+          <li>
+            <span class="n" aria-hidden="true">01</span>
+            <div>
+              <p class="rule">One accent, used like <em>ink</em>: green on paper, gold on the band, never both.</p>
+              <dl class="sg-practice"><div><dt>Do</dt><dd>Spend it on links, active states and CTAs.</dd></div><div><dt>Don't</dt><dd>Use it as a large fill.</dd></div></dl>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">02</span>
+            <div>
+              <p class="rule">One italic word per headline, on the word that carries the <em>weight</em>.</p>
+              <dl class="sg-practice"><div><dt>Do</dt><dd>Pick the word with the emotional payload of the line.</dd></div><div><dt>Don't</dt><dd>Italicise for convenience, or italicise two words.</dd></div></dl>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">03</span>
+            <div>
+              <p class="rule">Motion <em>drifts</em> on a slow exponential curve.</p>
+              <dl class="sg-practice"><div><dt>Do</dt><dd>Give every animation a complete static version for reduced motion.</dd></div><div><dt>Don't</dt><dd>Reach for spring, bounce or elastic curves.</dd></div></dl>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">04</span>
+            <div>
+              <p class="rule">No pure white, no pure black, no shadow on anything that isn't <em>floating</em>.</p>
+              <dl class="sg-practice"><div><dt>Do</dt><dd>Keep shadow for photographs, the cup, a hovered button.</dd></div><div><dt>Don't</dt><dd>Shadow a static card or container.</dd></div></dl>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sg-footer">
+    <div class="sg-wrap">
+      <span>Rendered from <a href="css/base.css">css/base.css</a> · Written spec in <a href="https://github.com/rbellamy-dev/cha-benefits/blob/main/DESIGN.md">DESIGN.md</a></span>
+      <span><a href="#top">Back to top</a> · <a href="index.html">Back to the site</a></span>
+    </div>
+  </footer>
+
+  <script src="js/system.js" defer></script>
+</body>
+
+</html>

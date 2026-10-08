@@ -1,10 +1,16 @@
 # Cha-Benefits
 
-An editorial green-tea brand site with an interactive steep timer, and a
-newsletter signup backed by [Resend](https://resend.com).
+A green-tea brand prototype testing whether teaching beats selling. It explains each benefit with specifics, maps tea to the time of day, and lets you brew along with a working steep timer.
 
 **Live:** [chabenefits.vercel.app](https://chabenefits.vercel.app/)
 
+![The "A day in five cups" section: five tea moments from first light to last warmth](docs/ritual.png)
+
+## Key decisions
+
+- **Teach before asking.** Benefits name the actual compounds (L-theanine, EGCG, catechins), and the email signup is the last section on the page.
+- **A timer you can brew with.** Pick a tea and it sets the temperature, dose and time. The cup's colour deepens as it steeps.
+- **Restraint as the brand.** One accent colour, slow motion, and none of the usual SaaS patterns like metric tiles or gradient text. Reduced motion gets a full static version, not a stripped one.
 <!--
 ## Stack
 

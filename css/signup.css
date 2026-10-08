@@ -30,7 +30,8 @@
   padding: .45rem; border-radius: 99px;
   transition: border-color .3s;
 }
-.form-group:focus-within { border-color: var(--gold); }
+/* .is-focus mirrors :focus-within for the style guide's static state row. */
+.form-group:focus-within, .form-group.is-focus { border-color: var(--gold); }
 .form-input {
   flex: 1; background: transparent; border: none; outline: none;
   color: var(--on-dark); font: 400 1rem var(--sans);

@@ -33,7 +33,7 @@
       try { data = await res.json(); } catch { /* non-JSON body */ }
 
       if (res.ok) {
-        ok.textContent = 'Welcome. Your letter is already steeping.';
+        ok.textContent = 'You’re on the list. Thank you.';
         input.value = '';
         succeeded = true;
       } else {

@@ -20,6 +20,9 @@
   --ease-soft:    cubic-bezier(.4,.05,.2,1);
   --hairline:     oklch(24% 0.022 55 / 0.14);
   --section-y:    clamp(5rem, 11vw, 8.5rem);
+  /* Title level: one size for list and ritual names, a small step for brew steps */
+  --title-size:    clamp(1.3rem, 2.1vw, 1.6rem);
+  --title-size-sm: 1.25rem;
   --z-content:    2;
 }
 
@@ -42,7 +45,9 @@ h1, h2, h3, h4 { font-optical-sizing: auto; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ::selection { background: var(--accent); color: var(--canvas); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+/* .is-hover / .is-focus / .is-active sit beside the real pseudo-classes so the
+   style guide (system.html) can show every state statically from one rule. */
+:focus-visible, .is-focus { outline: 2px solid var(--accent); outline-offset: 3px; }
 .hero :focus-visible,
 .ritual :focus-visible,
 .signup :focus-visible,
@@ -159,18 +164,18 @@ a { text-decoration: none; color: inherit; }
   background: var(--accent); color: var(--canvas);
   transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out), background .3s, color .3s;
 }
-.btn-solid:hover {
+.btn-solid:hover, .btn-solid.is-hover {
   background: var(--accent-deep); transform: translateY(-3px);
   box-shadow: 0 14px 28px -12px oklch(52% 0.145 152 / 0.45);
 }
-.btn-solid:active { transform: translateY(1px); transition-duration: .08s; }
+.btn-solid:active, .btn-solid.is-active { transform: translateY(1px); transition-duration: .08s; }
 .btn-solid--gold { background: var(--gold); color: var(--band-deep); }
-.btn-solid--gold:hover { background: oklch(78% 0.105 73); box-shadow: 0 14px 28px -12px oklch(72% 0.105 73 / 0.4); }
+.btn-solid--gold:hover, .btn-solid--gold.is-hover { background: oklch(78% 0.105 73); box-shadow: 0 14px 28px -12px oklch(72% 0.105 73 / 0.4); }
 .btn-ghost {
   background: transparent; color: var(--ink);
   border: 1.5px solid oklch(24% 0.022 55 / 0.28);
   transition: transform .35s var(--ease-out), border-color .3s, color .3s;
 }
-.btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+.btn-ghost:hover, .btn-ghost.is-hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
 .btn-ghost--dark { color: var(--on-dark); border-color: oklch(95.9% 0.008 79 / 0.35); }
-.btn-ghost--dark:hover { border-color: var(--gold); color: var(--gold); }
+.btn-ghost--dark:hover, .btn-ghost--dark.is-hover { border-color: var(--gold); color: var(--gold); }
