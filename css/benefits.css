@@ -47,7 +47,9 @@
    holds there while every row of the list scrolls past. */
 .benefits-figure {
   align-self: stretch;
-  margin-bottom: calc(-1 * min(8rem, var(--section-y) - 1.5rem));
+  /* extend into a quarter of the bottom padding: the rest stays as air
+     between the image and the next section */
+  margin-bottom: calc(var(--section-y) / -4);
   padding: 0 clamp(0px, 1vw, 12px);
   container-type: inline-size; /* the frame is square, so its height is 100cqi */
 }
