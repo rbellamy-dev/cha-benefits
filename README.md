@@ -2,7 +2,7 @@
 
 A green-tea brand prototype testing whether teaching beats selling. It explains each benefit with specifics, maps tea to the time of day, and lets you brew along with a working steep timer.
 
-**Live:** [chabenefits.vercel.app](https://chabenefits.vercel.app/)
+**Live:** [chabenefits.vercel.app](https://chabenefits.vercel.app/) · [Style guide](https://chabenefits.vercel.app/system)
 
 ![The "A day in five cups" section: five tea moments from first light to last warmth](docs/ritual.png)
 
@@ -11,6 +11,8 @@ A green-tea brand prototype testing whether teaching beats selling. It explains 
 - **Teach before asking.** Benefits name the actual compounds (L-theanine, EGCG, catechins), and the email signup is the last section on the page.
 - **A timer you can brew with.** Pick a tea and it sets the temperature, dose and time. The cup's colour deepens as it steeps.
 - **Restraint as the brand.** One accent colour, slow motion, and none of the usual SaaS patterns like metric tiles or gradient text. Reduced motion gets a full static version, not a stripped one.
+- **A style guide that can't drift.** It renders from the site's own CSS, so every colour, type style and component state matches what ships. Building it exposed three different "Title" sizes across the site; they now share one `--title-size` token.
+
 <!--
 ## Stack
 
