@@ -1,1 +1,7 @@
 server.js
+
+# private, git-ignored working folders: never upload
+.impeccable/
+brand-system/
+cha-casestudy/
+.env*
